@@ -1,0 +1,52 @@
+
+/* input */
+.input{
+  height: 40px;
+  border: 2px solid #3532328c;
+  border-radius: 15px;
+}
+/* 正在进行 */
+.pending_box{
+  display: flex;
+  flex-direction: column;
+}
+.pending{
+  margin: 7px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  box-sizing: border-box;
+  line-height: 40px;
+  font-size: 22px;
+}
+.pending_num{
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #3532328c;
+    text-align: center;
+}
+.pending_list{
+  margin: 5px 0;
+  height: 40px;
+  line-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 7px;
+  box-sizing: border-box;
+  border: 1px solid #3532328c;
+  border-radius: 5px;
+}
+.pending_left{
+  display: flex;
+}
+.content{
+  margin-top: 3px;
+  width: 300px;
+  height: 30px;
+}
+/* 删除图片 */
+image{
+  width: 35px;
+  height: 35px;
+}
