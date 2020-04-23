@@ -1,0 +1,39 @@
+<view>
+	<!-- input输入框 -->
+	<input type="input" value="{{keyword}}" placeholder="请输入内容" class="input" bindconfirm="add"></input>
+
+	<!-- 正在进行 -->
+	<view class="pending_box">
+		<!-- 数量 -->
+		<view class="pending">
+			<text>未完成</text>
+			<text class="pending_num">{{sum}}</text>
+		</view>
+		<!-- 列表 -->
+		<view class="pending_list" wx:for='{{list}}' wx:key='index' hidden="{{item.show}}">
+			<view class="pending_left"  >
+				<checkbox bindtap="check" checked="{{item.show}}"  data-index="{{index}}" ></checkbox>
+			<text class="content">{{item.val}}</text>
+			</view>
+			<image src="/images/del.png" bindtap='del' data-index="{{index}}"></image>
+		</view>
+	</view>
+
+	<!-- 已经完成 -->
+	<view class="pending_box">
+		<!-- 数量 -->
+		<view class="pending">
+			<text >已完成</text>
+			<text class="pending_num">{{num}}</text>
+		</view>
+		<!-- 列表 -->
+		<view class="pending_list" wx:for='{{list}}' wx:key='index' hidden="{{!item.show}}">
+			<view class="pending_left">
+					<checkbox bindtap="check" checked="{{item.show}}" data-index="{{index}}" ></checkbox>
+          <text class="content">{{item.val}}</text>
+			</view>
+			<image src="/images/del.png" bindtap='del' data-index="{{index}}"></image>
+		</view>
+	</view>
+
+</view>
